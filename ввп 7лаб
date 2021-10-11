@@ -1,0 +1,64 @@
+#include <stdio.h>
+
+int main()
+{   
+    printf("1 задание\n");
+    float x,z,q;
+    const float pi=3.14;
+    printf("Введите значение угла в градусах от 0 до 360-");
+    scanf("%f",&x);
+    z=pi/180;//1 градус
+    q=z*x;
+    printf("Значение угла в радианах=%.2f\n\n",q);
+    
+    printf("2 задание\n");
+    float y,w;
+    printf("Введите значение угла в радианах от 0 до 2pi-");
+    scanf("%f",&y);
+    w=(y*180)/pi;
+    printf("Значение угла в радианах=%.2f\n\n",w);
+    
+    printf("3 задание\n");
+    float X,A=100,gr,Y;
+    printf("Сколько кг яблок можно купить за 100 руб?\n");
+    scanf("%f",&X);
+    printf("Сколько кг яблок вы хотите купить?\n");    
+    scanf("%f",&Y);
+    gr=A/X;
+    Y=(Y*A)/X;
+    printf("Кг яблок стоит=%.2f рублей\n",gr);
+    printf("Y яблок стоит=%.2f рублей\n\n",Y);
+    
+    printf("4 задание\n");
+    float V1,V2,S,T,v3,v4,sum;
+    printf("Введите сначала скорость 1го автомобиля,потом 2го\n");
+    scanf("%f%f",&V1,&V2);  
+    printf("Введите расстояние между ними в начале пути\n");
+    scanf("%f",&S);    
+    printf("Введите количество часов,которое они проехали\n");
+    scanf("%f",&T);
+    v3=V1*T;
+    v4=V2*T;
+    sum=v3+v4+S;
+    printf("Общее расстояние=%.2f\n\n",sum);
+     
+    printf("5 задание\n");
+    float a,b,rez;
+    printf("Введите сначала коэффицент A, потом B\n");
+    scanf("%f%f",&a,&b);
+    rez=-b/a;
+    printf("X=%.5f\n\n",rez);
+      
+    printf("6 задание\n");
+    float F1,F2,H1,H2,C1,C2,K,j,n;
+    printf("Введите сначала коэффиценты A1,B1 потом C1\n");
+    scanf("%f%f%f",&F1,&H1,&C1);  
+    printf("Введите сначала коэффиценты A2,B2 потом C2\n");
+    scanf("%f%f%f",&F2,&H2,&C2);   
+    K=F1*H2-F2*H1;
+    j=(C1*H2-C2*H1)/K;
+    n=(F1*C2-F2*C1)/K;
+    printf("X=%.2f\n",j);
+    printf("Y=%.2f\n",n);
+    return 0;
+}
