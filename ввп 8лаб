@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main()
+{
+    printf("1 задание\n");
+    float x;
+    printf("Введите размер файла в байтах -");
+    scanf("%f",&x);
+    int z=x/1024;
+    printf("Размер файла в Килобайтах=%d\n\n",z);
+    
+    printf("2 задание\n");
+    float a,b;
+    printf("Введите длины отрезков A и B (А>В)\n");
+    scanf("%f%f",&a,&b);
+    int w=a/b;
+    printf("Количество отрезков B, размещенных на отрезке A=%d\n\n",w);
+    
+    printf("3 задание\n");
+    float A,B;
+    printf("Введите длины отрезков A и B (А>В)\n");
+    scanf("%f%f",&A,&B);
+    int p=A/B;
+    float rez=A-B*p;
+    printf("Длина незанятой части отрезка A=%.2f\n\n",rez);
+    
+    printf("4 задание\n");
+    int y,r;
+    printf("Введите 2значное число\n");
+    scanf("%d",&y);
+    r=y/10+y%10*10;
+    printf("Y=%d\n\n",r);
+    
+    printf("5 задание\n");
+    int Z,t;
+    printf("Введите 3значное число\n");
+    scanf("%d",&Z);
+    t=Z/100+Z%100*10;
+    printf("Z=%d\n\n",t);
+    
+    return 0;
+}
