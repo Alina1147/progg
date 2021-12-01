@@ -1,0 +1,265 @@
+#include <stdio.h>
+int main()
+{
+printf("1 задание\n");
+int A,B;
+printf("Введите номер дня -");
+scanf("%d",&A);
+printf("Введите номер месяца -");
+scanf("%d",&B);
+    if ((A>29 && B ==2) || (A>30 && B ==4) || (A>30 && B ==6)|| (A>30 && B==9) || (A>30 && B==11)) printf("Такого дня в данном месяце не существует.\n\n");
+    else {
+    if (A == 1) printf("Первое ");
+    if (A == 2) printf("Второе ");
+    if (A == 3) printf("Третье ");
+    if (A == 4) printf("Четвёртое ");
+    if (A == 5) printf("Пятое ");
+    if (A == 6) printf("Шестое ");
+    if (A == 7) printf("Седьмое ");
+    if (A == 8) printf("Восьмое ");
+    if (A == 9) printf("Девятое ");
+    if (A == 10) printf("Десятое ");
+    if (A == 11) printf("Одиннадцатое ");
+    if (A == 12) printf("Двенадцатое ");
+    if (A == 13) printf("Тринадцатое ");
+    if (A == 14) printf("Четырнадцатое ");
+    if (A == 15) printf("Пятнадцатое ");
+    if (A == 16) printf("Шестнадцатое ");
+    if (A == 17) printf("Семнадцатое ");
+    if (A == 18) printf("Восемнадцатое ");
+    if (A == 19) printf("Девятнадцатое ");
+    if (A == 20) printf("Двадцатое ");
+    if (A == 21) printf("Двадцать первое ");
+    if (A == 22) printf("Двадцать второе ");
+    if (A == 23) printf("Двадцать третье ");
+    if (A == 24) printf("Двадцать четвёртое ");
+    if (A == 25) printf("Двадцать пятое ");
+    if (A == 26) printf("Двадцать шестое ");
+    if (A == 27) printf("Двадцать седьмое ");
+    if (A == 28) printf("Двадцать восьмое ");
+    if (A == 29) printf("Двадцать девятое ");
+    if (A == 30) printf("Тридцатое ");
+    if (A == 31) printf("Тридцать первое ");
+
+    if (B == 1) printf("января\n\n");
+    if (B == 2) printf("февраля\n\n");
+    if (B == 3) printf("марта\n\n");
+    if (B == 4) printf("апреля\n\n");
+    if (B == 5) printf("мая\n\n");
+    if (B == 6) printf("июня\n\n");
+    if (B == 7) printf("июля\n\n");
+    if (B == 8) printf("августа\n\n");
+    if (B == 9) printf("сентября\n\n");
+    if (B == 10) printf("октября\n\n");
+    if (B == 11) printf("ноября\n\n");
+    if (B == 12) printf("декабря\n\n");
+}
+ printf("2 задание\n");
+int N;
+    char c;
+    printf("Робот может перемещаться в четырёх направлениях.\n"
+           "Введите n, если исходное направление робота Север.\n" 
+           "Введите w, если исходное направление робота Запад.\n"
+           "Введите s, если исходное направление робота Юг.\n"
+           "Введите e, если исходное направление робота Восток.\n\n");
+
+    printf("Робот может принимать три цифровые команды:\n"
+           "Введите 0 для продолжения движения.\n"
+           "Введите 1 для поворота налево.\n"
+           "Введите -1 для поворота направо.\n\n");
+    printf("Введите исходное направление робота:\n");
+    scanf("%c",&c);
+    printf("Введите цифровую команду роботу:\n");
+    scanf("%d",&N);
+    switch (c) {
+        case 'n':
+            switch (N) {
+                case 1:
+                    c='w';
+                    break;
+                case 0:
+                    c='n';
+                    break;
+                case -1:
+                    c='e';
+                    break;
+                }
+            break;   
+        case 's':
+            switch (N) {
+                case 1:
+                    c='e';
+                    break;
+                case 0:
+                    c='s';
+                    break;
+                case -1:
+                    c='w';
+                    break;
+            }
+           break;   
+        case 'w':
+            switch (N) {
+                case 1:
+                    c='s';
+                    break;
+                case 0:
+                    c='w';
+                    break;
+                case -1:
+                    c='n';
+                    break;
+            }
+            break;  
+        case 'e':
+            switch (N) {
+                case 1:
+                    c='n';
+                    break;
+                case 0:
+                    c='e';
+                    break;
+                case -1:
+                    c='s';
+                    break;
+                }
+            break;
+        
+    }
+    printf("Направление робота после выполнения команды: %c\n",c);
+    
+    printf("3 задание\n");
+    int num;
+      printf("Введите количество заданий: \n");
+            scanf("%d",&num);
+            if (num < 10 || num > 40)
+                printf("Такого задания нет\n\n");
+            else {
+                if (num == 10) printf("Десять ");
+                if (num == 11) printf("Одиннадцать ");
+                if (num == 12) printf("Двенадцать ");
+                if (num == 13) printf("Тринадцать ");
+                if (num == 14) printf("Четырнадцать ");
+                if (num == 15) printf("Пятнадцать ");
+                if (num == 16) printf("Шестнадцать ");
+                if (num == 17) printf("Семнадцать ");
+                if (num == 18) printf("Восемнадцать ");
+                if (num == 19) printf("Девятнадцать ");
+
+                if (num > 19) {
+                    if (num / 10 == 2) printf("Двадцать");
+                    if (num / 10 == 3) printf("Тридцать");
+                    if (num / 10 == 4) printf("Сорок");
+                    
+                    if (num % 10 == 1) printf(" один ");
+                    if (num % 10 == 2) printf(" два ");
+                    if (num % 10 == 3) printf(" три ");
+                    if (num % 10 == 4) printf(" четыре ");
+                    if (num % 10 == 5) printf(" пять ");
+                    if (num % 10 == 6) printf(" шесть ");
+                    if (num % 10 == 7) printf(" семь ");
+                    if (num % 10 == 8) printf(" восемь ");
+                    if (num % 10 == 9) printf(" девять ");
+                }
+printf("учебных заданий\n\n");
+            }
+    printf("4 задание\n");
+     int nu;
+      printf("Введите число: \n");
+            scanf("%d",&nu);
+            if (nu<100 || nu>999)
+                printf("Такого задания нет\n\n");
+            else {
+                if (nu/100 == 1) printf("Сто");
+                if (nu/100 == 2) printf("Двести");
+                if (nu/100 == 3) printf("Триста");
+                if (nu/100 == 4) printf("Четыреста");
+                if (nu/100 == 5) printf("Пятьсот");
+                if (nu/100 == 6) printf("Шестьсот");
+                if (nu/100 == 7) printf("Семьсот");
+                if (nu/100 == 8) printf("Восемьсот");
+                if (nu/100 == 9) printf("Девятьсот");
+                nu %= 100;
+                if (nu<20 && nu>9) {
+                    if (nu == 10) printf(" десять");
+                    if (nu == 11) printf(" одиннадцать");
+                    if (nu == 12) printf(" двенадцать");
+                    if (nu == 13) printf(" тринадцать");
+                    if (nu == 14) printf(" четырнадцать");
+                    if (nu == 15) printf(" пятнадцать");
+                    if (nu == 16) printf(" шестнадцать");
+                    if (nu == 17) printf(" семнадцать");
+                    if (nu == 18) printf(" восемнадцать");
+                    if (nu == 19) printf(" девятнадцать");
+                }
+                else {
+                    if (nu/10 == 2) printf(" двадцать");
+                    if (nu/10 == 3) printf(" тридцать");
+                    if (nu/10 == 4) printf(" сорок");
+                    if (nu/10 == 5) printf(" пятьдесят");
+                    if (nu/10 == 6) printf(" шестьдесят");
+                    if (nu/10 == 7) printf(" семьдесят");
+                    if (nu/10 == 8) printf(" восемьдесят");
+                    if (nu/10 == 9) printf(" девяносто");
+
+                    if (nu%10 == 1) printf(" один");
+                    if (nu%10 == 2) printf(" два");
+                    if (nu%10 == 3) printf(" три");
+                    if (nu%10 == 4) printf(" четыре");
+                    if (nu%10 == 5) printf(" пять");
+                    if (nu%10 == 6) printf(" шесть");
+                    if (nu%10 == 7) printf(" семь");
+                    if (nu%10 == 8) printf(" восемь");
+                    if (nu%10 == 9) printf(" девять");
+                }
+            }
+    printf("\n5 задание\n");
+        int n,a,ans;
+   printf("Введите номер года >= 1984:\n");
+            scanf("%d",&n);
+            if (n >= 1984) {
+                printf("Год");
+                n-=1983;
+                a=0;
+                ans = 0;
+                while (a<n ) {
+                    ans++;
+                    a+= 12;
+                }
+                if (ans%5 == 0) {
+                    if (n%12 == 3 || n%12 == 4 || n%12 == 5) printf(" черного");
+                    else printf(" черной");
+                }
+                if (ans%5 == 1) {
+                    if (n%12 == 3 || n%12 == 4 || n%12 == 5) printf(" зеленого");
+                    else printf(" зеленой");
+                }
+
+                if (ans%5 == 2) {
+                    if (n%12 == 3 || n%12 == 4 || n%12 == 5)printf(" красного");
+                    else printf(" красной");
+                }
+
+                if (ans%5 == 3) {
+                    if (n%12 == 3 || n%12 == 4 || n%12 == 5)  printf(" желтого");
+                   else printf(" желтой");
+                }
+                if (ans%5 == 4) {
+                    if (n%12 == 3 || n%12 == 4 || n%12 == 5) printf(" белого");
+                    else printf(" белой");
+                }
+                if (n % 12 == 0) printf(" свиньи");
+                if (n % 12 == 1) printf(" крысы");
+                if (n % 12 == 2) printf(" коровы");
+                if (n % 12 == 3) printf(" тигра");
+                if (n % 12 == 4) printf(" зайца");
+                if (n % 12 == 5) printf(" дракона");
+                if (n % 12 == 6) printf(" змеи");
+                if (n % 12 == 7) printf(" лошади");
+                if (n % 12 == 8) printf(" овцы");
+                if (n % 12 == 9) printf(" обезьяны");
+                if (n % 12 == 10) printf(" курицы");
+                if (n % 12 == 11) printf(" собаки");
+            }
+    return 0;
+}
