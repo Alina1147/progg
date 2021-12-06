@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+int main()
+{
+    printf("1 задание\n");
+    float A,a;
+    printf("Введите цену 1 кг конфет- ");
+    scanf("%f",&A);
+    for(a=0.1;a<1.1;a+=0.1){
+        printf("Цена %.1f кг конфет=%.2f\n",a,A*a);
+    }
+    
+    printf("2 задание\n");
+    int N;
+    float n=1;
+    printf("Введите целое число сомножителей- ");
+    scanf("%d",&N);
+    for(float j=0;j<=N;j++) n=n*(1+j/10);
+    printf("Произведение= %.2f\n",n);
+
+    printf("3 задание:\n");
+    int C,c=0;
+    printf("Введите целое число- ");
+    scanf("%d",&C);
+    for(int i=1;i<=(2*C-1);i+=2) c=c+i;
+    printf("Квадрат данного числа= %d\n",c);
+    
+    printf("4 задание\n");
+    int m,k,o=1;
+    printf("Введите вещественное число- ");
+    scanf("%d",&m);
+    printf("Введите целое число- ");
+    scanf("%d",&k);
+    int t=m;
+    for(int l=1;l<=k;l++) {
+        o=o+m;
+        m=m*t;
+    }
+    printf("Сумма= %d\n",o);
+    
+    printf("5 задание\n");
+    int w,e,s,ans;
+    printf("Введите вещественное число- ");
+    scanf("%d",&w);
+    printf("Введите целое число- ");
+    scanf("%d",&e);
+    s=w;
+    w=-w;
+        ans=1+w;
+    for(int y=2;y<=e;y++){
+        w=w*(-s);
+        ans=ans+w;
+    }
+    printf("Сумма= %d\n",ans);
+    
+    return 0;
+}
