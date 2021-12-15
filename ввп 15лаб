@@ -1,0 +1,88 @@
+#include <stdio.h>
+
+ float PowerA3(float A);
+ int Sign(float X);
+ float RingS(float q); 
+ int Quarter(float x, float y);
+ float Fact2(float N);
+ 
+int main()
+{   
+    printf("1 задание\n");
+    float A;
+    for(int i=1;i<6;i++){
+    printf("Введите число ");
+    scanf("%f",&A);
+    float B=PowerA3(A);
+    printf("Результат:%.2f\n",B);
+}
+    printf("\n2 задание\n");
+    float a,b;
+    printf("Введите первое число ");
+    scanf("%f",&a);
+    printf("Введите второе число ");
+    scanf("%f",&b);
+    int c=Sign(a)+Sign(b);
+    printf("Результат:%d\n\n",c);
+    
+    printf("3 задание\n");
+    float q,w;
+    for(int i=1;i<4;i++){
+    printf("Введите меньший радиус ");
+    scanf("%f",&q);
+    printf("Введите бОльший радиус ");
+    scanf("%f",&w);
+    float v=RingS(w)-RingS(q);
+    printf("Площадь кольца, заключенного между двумя окружностями с общим центром = %.2f\n",v);
+    }
+    
+    printf("4 задание");
+    float e,r;
+    for(int i=1;i<4;i++){
+    printf("\nВведите ненулевые координаты точки ");
+    scanf("%f%f",&e,&r);
+    Quarter(e,r);
+    }
+    
+    printf("\n5 задание");
+    float N;
+    printf("\nВведите ненулевое число ");
+    scanf("%f",&N);
+    Fact2(N);
+    printf("Двойной факториал:%.2f\n", Fact2(N));
+    return 0;
+}
+//1
+    float PowerA3(float A){
+      float B=A*A*A;
+      return B;
+    }
+//2 
+    int Sign(float X){
+      if (X<0) X=-1;
+      else if (X=0) X=0;
+      else X=1;
+      return X;
+   }
+ //3 
+    float RingS(float q){
+      const float pi=3.14;
+      float S=pi*q*q;
+      return S;
+    }
+ //4 
+    int Quarter(float x, float y){
+      if ((x>0)&&(y>0)) printf("Точка находится в 1 четверти");
+      else if ((x>0)&&(y<0)) printf("Точка находится в 4 четверти");
+      else if ((x<0)&&(y>0)) printf("Точка находится вo 2 четверти");
+      else printf("Точка находится в 3 четверти");
+     }
+ //5 
+    float Fact2(float N){
+      int y=1; 
+      while(N>0){
+      y=y*N;
+      N=N-2;
+      }    
+      return(y);
+    } 
