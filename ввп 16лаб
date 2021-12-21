@@ -1,0 +1,65 @@
+#include <stdio.h>
+int main()
+{
+    printf("1 задание\n");
+    int i,j,N;
+    printf("Введите размер массива ");
+    scanf("%d",&N);
+    int mas[N];
+    for(i=1,j=0;i<N;i+=2,j++){
+        mas[j]=i;
+        printf("%d  ",mas[j]);
+    }
+    printf("\n2 задание\n");
+    int n,a,d,masiv[n];
+    printf("Введите размер массива ");
+    scanf("%d",&n);
+    printf("Введите первый член геометрической прогрессии ");
+    scanf("%d",&a);
+    printf("Введите знаменатель геометрической прогрессии ");
+    scanf("%d",&d);
+    for (int k=0;k<n;k++,a*= d) {
+        masiv[k]=a;
+        printf("%d  ",masiv[k]);
+    }
+    
+    printf("\n3 задание\n");
+    int y,y1,raz,m[raz];
+    printf("Введите размер массива ");
+    scanf("%d",&raz);
+    printf("Введите два числа больше 2 - ");
+    scanf("%d%d",&m[1],&m[2]);
+    m[3]=m[1]+m[2];
+    printf("%d  %d  %d  ",m[1],m[2],m[3]);
+    for(y=4;y<raz;++y){
+        m[y]=m[y-1]*2;
+        printf("%d  ",m[y]);
+    }
+    printf("\n4 задание\n");
+    int x,N1,A[N1];
+    printf("Введите размер массива ");
+    scanf("%d",&N1);
+    printf("Введите массив - ");
+    for(x=0;x<N1;x++) scanf("%d",&A[x]);
+    printf("ВВеденный массив ");
+    for(x=0;x<N1;x++) printf("%d",A[x]);
+    printf("\nВВеденный массив после преобразований ");
+    for(x=0;x<N1/2;x++){
+    printf("%d ",A[x]);
+    printf("%d ",A[N1-x-1]);    
+    }
+    if (N1%2==1) printf("%d ",A[N1/2]);
+    
+    printf("\n5 задание\n");
+    int s,N2,A2[N2];
+    printf("Введите размер массива ");
+    scanf("%d",&N2);
+    printf("Введите массив - ");
+    for(s=0;s<N2;s++) scanf("%d",&A2[s]);
+    printf("ВВеденный массив ");
+    for(s=0;s<N2;s++) printf("%d ",A2[s]);
+    printf("\nВВеденный массив после преобразований ");
+    for (s=0;s<N2;s+=2) printf("%d ",A2[s]);
+    for (s=(N2/2)*2-1;s>0;s-=2) printf("%d ",A2[s]);
+    return 0;
+}
